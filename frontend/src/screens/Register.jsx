@@ -41,26 +41,26 @@ const Register = () => {
             {/* Top-center ambient indigo glow */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-accent-violet/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
 
-            <div className="w-full max-w-sm glass-panel p-8 rounded-2xl border-white/5 shadow-premium-glow relative z-10 hover:border-accent-violet/20 transition-all duration-300">
+            <div className="w-full max-w-sm glass-panel p-8 sm:p-10 rounded-2xl border-white/5 shadow-premium-glow relative z-10 hover:border-accent-violet/20 transition-all duration-300">
                 <header className="text-center mb-8">
-                    <div className="w-12 h-12 bg-obsidian-900 border border-obsidian-800 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-inner">
-                        <i className="ri-user-add-line text-xl text-zinc-300"></i>
+                    <div className="w-14 h-14 bg-obsidian-900 border border-obsidian-800 rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-inner">
+                        <i className="ri-user-add-line text-2xl text-accent-violet"></i>
                     </div>
-                    <h2 className="text-xl font-bold tracking-tight text-white mb-1.5 font-mono">create-account</h2>
-                    <p className="text-xs text-obsidian-400 font-mono">Join the real-time coding sandbox</p>
+                    <h2 className="text-2xl font-bold tracking-tight text-white mb-2">Create Account</h2>
+                    <p className="text-sm text-obsidian-400">Join the real-time coding sandbox</p>
                 </header>
 
-                <form onSubmit={submitHandler} className="space-y-4">
+                <form onSubmit={submitHandler} className="space-y-5">
                     <div>
                         <label
-                            className="block text-[10px] font-bold text-obsidian-300 uppercase tracking-wider mb-2 font-mono"
+                            className="block text-xs font-bold text-obsidian-300 uppercase tracking-widest mb-2"
                             htmlFor="email"
                         >
                             Email Address
                         </label>
                         <div className="relative">
                             <span className="absolute inset-y-0 left-0 pl-3.5 flex items-center text-obsidian-400">
-                                <i className="ri-mail-line text-sm"></i>
+                                <i className="ri-mail-line text-base"></i>
                             </span>
                             <input
                                 onChange={(e) => setEmail(e.target.value)}
@@ -68,7 +68,7 @@ const Register = () => {
                                 type="email"
                                 id="email"
                                 required
-                                className="w-full pl-10 pr-4 py-2.5 bg-obsidian-900 border border-obsidian-800 focus:border-accent-violet rounded-xl text-sm text-white placeholder-obsidian-500 focus:outline-none focus:ring-1 focus:ring-accent-violet/20 transition-all font-mono"
+                                className="w-full pl-10 pr-4 py-3 bg-obsidian-900 border border-obsidian-800 focus:border-accent-violet rounded-xl text-sm text-white placeholder-obsidian-500 focus:outline-none focus:ring-0 transition-all"
                                 placeholder="name@domain.com"
                             />
                         </div>
@@ -76,14 +76,14 @@ const Register = () => {
 
                     <div>
                         <label
-                            className="block text-[10px] font-bold text-obsidian-300 uppercase tracking-wider mb-2 font-mono"
+                            className="block text-xs font-bold text-obsidian-300 uppercase tracking-widest mb-2"
                             htmlFor="password"
                         >
                             Password
                         </label>
                         <div className="relative">
                             <span className="absolute inset-y-0 left-0 pl-3.5 flex items-center text-obsidian-400">
-                                <i className="ri-lock-line text-sm"></i>
+                                <i className="ri-lock-line text-base"></i>
                             </span>
                             <input
                                 onChange={(e) => setPassword(e.target.value)}
@@ -91,7 +91,7 @@ const Register = () => {
                                 type="password"
                                 id="password"
                                 required
-                                className="w-full pl-10 pr-4 py-2.5 bg-obsidian-900 border border-obsidian-800 focus:border-accent-violet rounded-xl text-sm text-white placeholder-obsidian-500 focus:outline-none focus:ring-1 focus:ring-accent-violet/20 transition-all font-mono"
+                                className="w-full pl-10 pr-4 py-3 bg-obsidian-900 border border-obsidian-800 focus:border-accent-violet rounded-xl text-sm text-white placeholder-obsidian-500 focus:outline-none focus:ring-0 transition-all"
                                 placeholder="Min. 3 characters"
                             />
                         </div>
@@ -99,15 +99,15 @@ const Register = () => {
 
                     <button
                         type="submit"
-                        className="w-full py-2.5 bg-white hover:bg-obsidian-100 text-obsidian-950 font-bold rounded-xl transition-all duration-200 mt-4 flex items-center justify-center gap-2 text-xs shadow-md font-mono uppercase tracking-wider active:scale-[0.98]"
+                        className="w-full py-3 bg-white hover:bg-obsidian-200 text-obsidian-950 font-bold rounded-xl transition-all duration-200 mt-6 flex items-center justify-center gap-2 text-sm shadow-md uppercase tracking-wider active:scale-[0.98]"
                     >
-                        <span>register</span>
-                        <i className="ri-check-line"></i>
+                        <span>Register</span>
+                        <i className="ri-check-line text-lg"></i>
                     </button>
                 </form>
 
-                <footer className="text-center mt-6 pt-6 border-t border-obsidian-900">
-                    <p className="text-xs text-obsidian-400 font-mono">
+                <footer className="text-center mt-8 pt-6 border-t border-obsidian-850/60">
+                    <p className="text-sm text-obsidian-400">
                         Already have an account?{" "}
                         <Link
                             to="/login"
