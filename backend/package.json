@@ -19,18 +19,18 @@
         "cors": "^2.8.5",
         "dotenv": "^17.0.1",
         "express": "^5.1.0",
+        "express-rate-limit": "^7.5.0",
         "express-validator": "^7.2.1",
         "helmet": "^8.0.0",
-        "express-rate-limit": "^7.5.0",
-        "zod": "^3.23.8",
         "ioredis": "^5.6.1",
         "jsonwebtoken": "^9.0.2",
         "mongoose": "^8.16.1",
         "morgan": "^1.10.0",
-        "socket.io": "^4.8.3"
+        "socket.io": "^4.8.3",
+        "zod": "^3.23.8"
     },
     "devDependencies": {
         "supertest": "^7.0.0",
-        "vitest": "^2.1.8"
+        "vitest": "^4.1.9"
     }
 }
